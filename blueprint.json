@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2019-02-18T14:58:17+11:00"
+    "timestamp": "2019-02-18T15:16:46+11:00"
   },
   "software": {
     "base": {
@@ -93,21 +93,6 @@
         "path": "./",
         "recursive": true
       }
-    ],
-    "framework_specific": {
-      "rake_tasks": [
-        {
-          "action": "db:migrate",
-          "always_run": true
-        },
-        {
-          "action": "db:seed"
-        },
-        {
-          "action": "assets:precompile",
-          "always_run": true
-        }
-      ]
-    }
+    ]
   }
 }

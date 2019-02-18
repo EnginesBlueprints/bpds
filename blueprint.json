@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2019-02-18T13:40:25+11:00"
+    "timestamp": "2019-02-18T13:57:49+11:00"
   },
   "software": {
     "base": {
@@ -42,12 +42,12 @@
     ],
     "installed_packages": [
       {
-        "name": "BluePrint-Designer",
+        "name": "developer_studio",
         "download_type": "http(s)",
-        "source_url": "https://github.com/lachdoug/developer_studio.get",
+        "source_url": "https://github.com/lachdoug/developer_studio.git",
         "destination": "./",
         "extraction_command": "git",
-        "path_to_extracted": "BluePrint-Designer"
+        "path_to_extracted": "developer_studio"
       }
     ],
     "service_configurations": [

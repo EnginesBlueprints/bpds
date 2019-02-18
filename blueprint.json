@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2019-02-18T13:57:49+11:00"
+    "timestamp": "2019-02-18T14:32:01+11:00"
   },
   "software": {
     "base": {
@@ -27,6 +27,12 @@
       "memory": {
         "required": 384,
         "recommended": 512
+      }
+    },
+    "scripts": {
+      "install": {
+        "language": "sh",
+        "content": "#!/bin/sh\r\n\r\nssh-keygen- -P \"\" -f /home/home_dir/.ssh/identity.pub\r\n"
       }
     },
     "system_packages": [

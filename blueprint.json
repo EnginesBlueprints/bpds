@@ -16,12 +16,12 @@
         "patch": 0
       }
     },
-    "timestamp": "2019-02-18T17:00:36+11:00"
+    "timestamp": "2019-02-18T18:53:57+11:00"
   },
   "software": {
     "base": {
       "name": "eds",
-      "framework": "rails5",
+      "framework": "rails4",
       "deployment_type": "web",
       "http_protocol": "https_only",
       "memory": {

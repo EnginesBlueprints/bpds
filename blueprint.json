@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2019-02-18T11:58:06+11:00"
+    "timestamp": "2019-02-18T13:40:25+11:00"
   },
   "software": {
     "base": {
@@ -43,7 +43,8 @@
     "installed_packages": [
       {
         "name": "BluePrint-Designer",
-        "source_url": "https://github.com/EnginesOS/BluePrint-Designer.git",
+        "download_type": "http(s)",
+        "source_url": "https://github.com/lachdoug/developer_studio.get",
         "destination": "./",
         "extraction_command": "git",
         "path_to_extracted": "BluePrint-Designer"

@@ -16,12 +16,12 @@
         "patch": 0
       }
     },
-    "timestamp": "2019-02-18T11:15:28+11:00"
+    "timestamp": "2019-02-18T11:58:06+11:00"
   },
   "software": {
     "base": {
       "name": "eds",
-      "framework": "sinatra",
+      "framework": "rails5",
       "deployment_type": "web",
       "http_protocol": "https_only",
       "memory": {

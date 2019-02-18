@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2019-02-18T15:16:46+11:00"
+    "timestamp": "2019-02-18T15:42:11+11:00"
   },
   "software": {
     "base": {
@@ -30,9 +30,15 @@
       }
     },
     "scripts": {
+      "start": {
+        "content": "#!/bin/sh\r\n\r\ncd /home/app\r\ngit pull\r\nbundle install --standalone\r\n\r\nrake db:migrate"
+      },
       "install": {
         "language": "sh",
-        "content": "#!/bin/sh\r\n\r\nssh-keygen -P \"\" -f /home/home_dir/.ssh/identity.pub\r\n"
+        "content": "#!/bin/sh\r\ncd /home/app\r\n\r\nssh-keygen -P \"\" -f /home/home_dir/.ssh/identity.pub\r\n"
+      },
+      "first_run": {
+        "content": "#!/bin/sh\r\ncd /home/app\r\nssh-keygen -P \"\" -f /home/home_dir/.ssh/identity\r\nrake db:migrate\r\nrake db:seed\r\n"
       }
     },
     "system_packages": [

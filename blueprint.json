@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2019-02-18T19:01:02+11:00"
+    "timestamp": "2019-02-22T10:07:47+11:00"
   },
   "software": {
     "base": {
@@ -69,7 +69,7 @@
         "variables": {
           "service_name": "git_store",
           "volume_src": " ",
-          "engine_path": "git_store",
+          "engine_path": "",
           "permissions": "rw",
           "user": "_Engines_Builder(data_uid)",
           "group": "_Engines_Builder(data_gid)"

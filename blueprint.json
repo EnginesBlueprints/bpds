@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2019-02-22T10:07:47+11:00"
+    "timestamp": "2020-02-23T13:52:06+11:00"
   },
   "software": {
     "base": {
@@ -31,14 +31,14 @@
     },
     "scripts": {
       "start": {
-        "content": "#!/bin/sh\r\n\r\ncd /home/app\r\ngit pull\r\nbundle install --standalone\r\n\r\nrake db:migrate"
+        "content": "#!/bin/sh\r\n\r\ncd /home/app\r\ngit pull\r\nbundle install --standalone\r\n\r\nbundle exec rake db:migrate"
       },
       "install": {
         "language": "sh",
         "content": "#!/bin/sh\r\ncd /home/app\r\n\r\nssh-keygen -P \"\" -f /home/home_dir/.ssh/identity.pub\r\n"
       },
       "first_run": {
-        "content": "#!/bin/sh\r\ncd /home/app\r\nssh-keygen -P \"\" -f /home/home_dir/.ssh/identity\r\nrake db:migrate\r\nrake db:seed\r\n"
+        "content": "#!/bin/sh\r\ncd /home/app\r\nssh-keygen -P \"\" -f /home/home_dir/.ssh/identity\r\nbundle exec rake db:migrate\r\nbundle exec rake db:seed\r\n"
       }
     },
     "system_packages": [
@@ -72,7 +72,9 @@
           "engine_path": "",
           "permissions": "rw",
           "user": "_Engines_Builder(data_uid)",
-          "group": "_Engines_Builder(data_gid)"
+          "group": "_Engines_Builder(data_gid)",
+          "fw_user": "_Engines_Builder(cont_user_id)",
+          "exclude_from_backup": "false"
         }
       },
       {
@@ -85,6 +87,17 @@
           "db_password": "_Engines_System(random(10))",
           "collation": "utf8_general_ci",
           "full_access": "0"
+        }
+      },
+      {
+        "publisher_namespace": "EnginesSystem",
+        "type_path": "cron",
+        "variables": {
+          "action_type": null,
+          "cron_job": null,
+          "title": null,
+          "when": null,
+          "notification_address": "default"
         }
       }
     ],
